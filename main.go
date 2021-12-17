@@ -14,6 +14,8 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	}
 
 	fmt.Println(string(requestDump))
+
+	fmt.Fprint(w, string(requestDump))
 }
 
 func main() {
